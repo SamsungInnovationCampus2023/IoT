@@ -21,3 +21,26 @@ while True:
         Verde.off()
         Rojo.off()
         Azul.on()
+
+#2do Programa Lectura de Temperatura
+import time
+import random  
+
+
+temperaturas = []
+
+while True:
+
+    temperatura_simulada = random.uniform(20, 30) 
+    temperaturas.append(temperatura_simulada)
+
+
+    if len(temperaturas) > 10:
+        temperaturas.pop(0)
+
+
+    promedio_temperatura = sum(temperaturas) / len(temperaturas)
+    print(f'Promedio de temperatura: {promedio_temperatura:.2f}°C')
+
+
+    time.sleep(10) 
